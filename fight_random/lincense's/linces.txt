@@ -1,0 +1,41 @@
+LICENSE
+
+1. DEFINITIONS:
+
+1. In these Terms, the following definitions apply (in addition to the other definitions herein):
+
+“Asset(s)” means any work, information, data, software, executable code, image, drawing, animation, audio content or video content in any digital medium or form including (but not limited to) 2D image files, 3D design files, GUI elements and audio files.
+
+“Derivative Work” means a modification or addition to a Licensed Asset or any other form in which a Licensed Asset may be recast, transformed or adapted.
+
+“Licence(s)” has the definition set out in clause 2
+
+“Licensed Asset” means an Asset in respect of which a Licence has been sold by a Seller and purchased by a Purchaser via the Marketplace.
+
+“Media Product” means any digital and/or media product, creation or platform of a Purchaser including (but not limited to) software, applications, video content, audio content, documents and websites.
+
+“Monetized Media Product” means a Media Product which, in addition to any original sale price of the Media Product, is capable of producing further income, profits, gains and any other financial consideration, value, receipt or measure for any party by any means whatsoever, including (but not limited to) via in-app purchase facilities or advertising.
+
+“Non-Monetized Media Product” means a Media Product in relation to which, other than the original sale price of the Media Product, no party is capable of receiving any further income, profits, gains and any other financial consideration, value, receipt or measure by any means whatsoever, including (but not limited to) via in-app purchase facilities or advertising.
+
+“Purchaser” means a Member who purchases a Licence of an Asset by way of sub-licence from Sierrassets via itch.io
+
+2.  LICENCE
+
+2.1 A “Licence” means that the Sierrassets grants to the Purchaser a non-exclusive perpetual licence to;
+
+(a) use the Licensed Asset to create Derivative Works; and
+
+(b) use the Licensed Asset and any Derivative Works as part of both Non-Monetized Media Products and Monetized Media Products, with no restriction on the number of projects the Licensed Asset may be used in. In either case, the Licensed Assets can be used in Media Products that are either:
+
+i) used for the Purchaser’s own personal use; and/or
+
+ii) used for the Purchaser’s commercial use in which case it may be distributed, sold and supplied by the Purchaser for any fee that the Purchaser may determine.
+
+2.2. A Licence does not allow the Purchaser to:
+
+(a) Use the Licensed Asset or Derivative Works in a logo, trademark or service mark;
+
+(b) Use, sell, share, transfer, give away, sublicense or redistribute the Licensed Asset or Derivate Works other than as part of the relevant Media Product; or
+
+(c) Allow the user of the Media Product to extract the Licensed Asset or Derivative Works and use them outside of the relevant Media Product.
