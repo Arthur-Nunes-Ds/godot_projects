@@ -1,0 +1,202 @@
+[gd_scene load_steps=2 format=3 uid="uid://2dqrjn6wtafo"]
+
+[ext_resource type="Script" uid="uid://5wsmulkt82sl" path="res://script/config.gd" id="1_cmeus"]
+
+[node name="config" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cmeus")
+tile_scream = "res://cenes/title_scream.tscn"
+
+[node name="VBoxButuon" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.746528
+anchor_top = 0.944444
+anchor_right = 0.963542
+anchor_bottom = 0.944444
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxButuon" type="HBoxContainer" parent="VBoxButuon"]
+layout_mode = 2
+
+[node name="aplicar" type="Button" parent="VBoxButuon/HBoxButuon"]
+layout_mode = 2
+text = "aplicar/salvar"
+
+[node name="voltar" type="Button" parent="VBoxButuon/HBoxButuon"]
+layout_mode = 2
+text = "voltar"
+
+[node name="rester_defaulte" type="Button" parent="VBoxButuon/HBoxButuon"]
+layout_mode = 2
+text = "config padrao"
+
+[node name="config_tabs" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.936728
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="video" type="TabBar" parent="config_tabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="resolucao_text" type="Label" parent="config_tabs/video"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 42.0
+offset_right = 111.0
+offset_bottom = 65.0
+text = "resolução: "
+
+[node name="resolucao" type="OptionButton" parent="config_tabs/video"]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 40.0
+offset_right = 232.0
+offset_bottom = 71.0
+selected = 0
+item_count = 4
+popup/item_0/text = "1152 x 648"
+popup/item_0/id = 0
+popup/item_1/text = "1280 x 720"
+popup/item_1/id = 1
+popup/item_2/text = "1024 x 768"
+popup/item_2/id = 2
+popup/item_3/text = "1280 x 960"
+popup/item_3/id = 3
+
+[node name="is_full_scream" type="CheckBox" parent="config_tabs/video"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 82.0
+offset_right = 133.0
+offset_bottom = 113.0
+text = "tela cheia"
+
+[node name="audio" type="TabBar" parent="config_tabs"]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="audio" type="HSlider" parent="config_tabs/audio"]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 38.0
+offset_right = 676.0
+offset_bottom = 54.0
+
+[node name="n_txt" type="Label" parent="config_tabs/audio"]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 37.0
+offset_right = 139.0
+offset_bottom = 60.0
+text = "100"
+
+[node name="porcente" type="Label" parent="config_tabs/audio"]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 37.0
+offset_right = 169.0
+offset_bottom = 60.0
+text = "%"
+
+[node name="controle" type="TabBar" parent="config_tabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="game" type="TabBar" parent="config_tabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="name_player" type="LineEdit" parent="config_tabs/game"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -1.0
+offset_top = 17.0
+offset_right = -858.0
+offset_bottom = 48.0
+grow_horizontal = 2
+size_flags_horizontal = 6
+size_flags_vertical = 8
+placeholder_text = "user name"
+metadata/_edit_use_anchors_ = true
+
+[node name="partidas_win" type="Label" parent="config_tabs/game"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 78.0
+offset_right = 125.0
+offset_bottom = 101.0
+text = "partidas wins: "
+metadata/_edit_use_anchors_ = true
+
+[node name="n_wins" type="Label" parent="config_tabs/game"]
+layout_mode = 0
+offset_left = 134.0
+offset_top = 79.0
+offset_right = 174.0
+offset_bottom = 102.0
+text = "000"
+metadata/_edit_use_anchors_ = true
+
+[node name="max_ponto" type="Label" parent="config_tabs/game"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 53.0
+offset_right = 124.0
+offset_bottom = 76.0
+text = "ponto maximo:"
+metadata/_edit_use_anchors_ = true
+
+[node name="n_ponto" type="Label" parent="config_tabs/game"]
+layout_mode = 0
+offset_left = 134.0
+offset_top = 54.0
+offset_right = 174.0
+offset_bottom = 77.0
+text = "000"
+metadata/_edit_use_anchors_ = true
+
+[node name="zera_status" type="Button" parent="config_tabs/game"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 142.0
+offset_right = 106.0
+offset_bottom = 173.0
+text = "zerar status"
+metadata/_edit_use_anchors_ = true
+
+[node name="altera_nome" type="Button" parent="config_tabs/game"]
+layout_mode = 0
+offset_left = 318.0
+offset_top = 14.0
+offset_right = 421.0
+offset_bottom = 45.0
+text = "altera nome
+"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="VBoxButuon/HBoxButuon/aplicar" to="." method="_on_aplicar_pressed"]
+[connection signal="pressed" from="VBoxButuon/HBoxButuon/voltar" to="." method="_on_voltar_pressed"]
+[connection signal="pressed" from="VBoxButuon/HBoxButuon/rester_defaulte" to="." method="_on_rester_defaulte_pressed"]
+[connection signal="item_selected" from="config_tabs/video/resolucao" to="." method="_on_resolucao_item_selected"]
+[connection signal="toggled" from="config_tabs/video/is_full_scream" to="." method="_on_tela_cheia_toggled"]
+[connection signal="value_changed" from="config_tabs/audio/audio" to="." method="_on_audio_value_changed"]
+[connection signal="pressed" from="config_tabs/game/zera_status" to="." method="_on_zera_status_button_up"]
+[connection signal="pressed" from="config_tabs/game/altera_nome" to="." method="_on_altera_nome_pressed"]

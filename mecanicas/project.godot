@@ -10,21 +10,42 @@ config_version=5
 
 [application]
 
-config/name="fight_random"
-run/main_scene="uid://o55i7r43446x"
+config/name="mecanicas"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[autoload]
+[input]
 
-Globals="*res://script/globals.gd"
-
-[display]
-
-window/size/resizable=false
+esquerda={
+"deadzone": 0.2,
+"events": []
+}
+direita={
+"deadzone": 0.2,
+"events": []
+}
+cima={
+"deadzone": 0.2,
+"events": []
+}
+baixo={
+"deadzone": 0.2,
+"events": []
+}
+space={
+"deadzone": 0.2,
+"events": []
+}
+esc={
+"deadzone": 0.2,
+"events": []
+}
+enterage={
+"deadzone": 0.2,
+"events": []
+}
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

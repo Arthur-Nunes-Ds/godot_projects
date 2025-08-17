@@ -1,0 +1,64 @@
+[gd_scene load_steps=2 format=3 uid="uid://o55i7r43446x"]
+
+[ext_resource type="Script" uid="uid://brctxg0025ixk" path="res://script/title_scream.gd" id="1_tg5ac"]
+
+[node name="title_scream" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tg5ac")
+config = "res://cenes/config.tscn"
+metadata/_edit_use_anchors_ = true
+
+[node name="fith_random" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "FIGTH_RANDOM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hbox" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -85.5
+offset_right = 81.0
+offset_bottom = 85.5
+grow_vertical = 2
+
+[node name="vbox" type="VBoxContainer" parent="Hbox"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="play" type="Button" parent="Hbox/vbox"]
+layout_mode = 2
+text = "play"
+
+[node name="multiplay" type="Button" parent="Hbox/vbox"]
+layout_mode = 2
+text = "multiplay"
+
+[node name="config" type="Button" parent="Hbox/vbox"]
+layout_mode = 2
+text = "config"
+
+[node name="credits" type="Button" parent="Hbox/vbox"]
+layout_mode = 2
+text = "Creditos"
+
+[node name="exit" type="Button" parent="Hbox/vbox"]
+layout_mode = 2
+text = "exit"
+
+[connection signal="pressed" from="Hbox/vbox/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Hbox/vbox/multiplay" to="." method="_on_multiplay_pressed"]
+[connection signal="pressed" from="Hbox/vbox/config" to="." method="_on_config_pressed"]
+[connection signal="pressed" from="Hbox/vbox/credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Hbox/vbox/exit" to="." method="_on_exit_pressed"]
