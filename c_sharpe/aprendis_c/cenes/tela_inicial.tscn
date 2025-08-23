@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbls2lgoqlo5d"]
+
+[ext_resource type="Script" uid="uid://c0juxhu8ne8m5" path="res://scripts/tela_inicial.cs" id="1_ctr1p"]
+
+[node name="tela_inicial" type="Control" node_paths=PackedStringArray("satrt", "exit", "config")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ctr1p")
+satrt = NodePath("start")
+exit = NodePath("exit")
+config = NodePath("config")
+star_cenes = "res://cenes/node_2d.tscn"
+
+[node name="start" type="Button" parent="."]
+layout_mode = 0
+offset_right = 45.0
+offset_bottom = 31.0
+text = "start"
+
+[node name="exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 143.0
+offset_right = 47.0
+offset_bottom = 174.0
+text = "exit
+"
+
+[node name="config" type="Button" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 63.0
+offset_right = 48.0
+offset_bottom = 94.0
+text = "cofig
+"

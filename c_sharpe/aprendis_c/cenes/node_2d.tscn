@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtuqinxriukua"]
+
+[ext_resource type="Texture2D" uid="uid://bravahi6kn8qn" path="res://icon.svg" id="1_465wg"]
+[ext_resource type="Script" uid="uid://bhey2x04j2rbe" path="res://scripts/hello_word.cs" id="2_sfyun"]
+[ext_resource type="Script" uid="uid://ym6swqsvblsv" path="res://scripts/MoveBasic.cs" id="3_u2fk2"]
+
+[node name="basic_c" type="Node2D"]
+
+[node name="hello_word" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("1_465wg")
+script = ExtResource("2_sfyun")
+
+[node name="move_basic" type="Sprite2D" parent="."]
+position = Vector2(574, 296)
+texture = ExtResource("1_465wg")
+script = ExtResource("3_u2fk2")
+velocidade = 7.5
