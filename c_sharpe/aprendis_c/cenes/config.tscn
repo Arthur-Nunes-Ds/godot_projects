@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmpjnaqpkry61"]
+
+[ext_resource type="Script" uid="uid://07ioxs8tnq4w" path="res://scripts/Config.cs" id="1_cmeus"]
+
+[node name="config" type="Control" node_paths=PackedStringArray("resolucao", "Volta", "Aplcar")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cmeus")
+Cenes = "res://cenes/tela_inicial.tscn"
+resolucao = NodePath("opcao_video")
+Volta = NodePath("voltar")
+Aplcar = NodePath("aplicar")
+
+[node name="opcao_video" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 40.0
+offset_right = 232.0
+offset_bottom = 71.0
+selected = 0
+item_count = 4
+popup/item_0/text = "1152 x 648"
+popup/item_0/id = 0
+popup/item_1/text = "1280 x 720"
+popup/item_1/id = 1
+popup/item_2/text = "1024 x 768"
+popup/item_2/id = 2
+popup/item_3/text = "1280 x 960"
+popup/item_3/id = 3
+
+[node name="voltar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 256.0
+offset_right = 154.0
+offset_bottom = 287.0
+text = "voltar"
+
+[node name="aplicar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 233.0
+offset_top = 255.0
+offset_right = 294.0
+offset_bottom = 286.0
+text = "aplicar
+"
