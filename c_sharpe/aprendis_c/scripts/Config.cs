@@ -1,9 +1,6 @@
 using Godot;
-using System;
-
 
 //necessario para acessar arquivos
-
 using System.IO;
 //necessario para o encondig
 using System.Text;
@@ -11,18 +8,16 @@ using System.Text;
 //curta um comando grande 
 using Dictionary = Godot.Collections.Dictionary;
 
-
 public partial class Config : Control
 {
     //ANCHOR - var's:
-    public bool is_voltar = false;
-    public int id_resolucao = 0;
+    bool is_voltar = false;
+    int id_resolucao = 0;
     //dic
-    public Dictionary user_save = new Dictionary();
-
+    Dictionary user_save = new Dictionary();
     //pega o caminho onde o jogo salva ás coisa do player local(como um ".mine...")
     string USER_PATCH = ProjectSettings.GlobalizePath("user://");
-
+    
     //ANCHOR - @exporte
     [Export]
     public string Cenes;
@@ -33,22 +28,19 @@ public partial class Config : Control
     [Export]
     public Button Volta, Aplcar;
 
+    //ANCHOR - funções 
     public override void _Ready()
     {
         //faz o linck de metetos
         Volta.Pressed += voltar;
         Aplcar.Pressed += aplicar_btn;
         resolucao.ItemSelected += reslocao_indexe;
-
-        //GD.Print(USER_PATCH);
-
+        //GD.Print(USER_PATCH); //<- descobrir o caminho do user
         load();
-
         base._Ready();
     }
     private void load()
     {
-        GD.Print($"dic_antes_load: {user_save}");
         string jsl = LoadJson(USER_PATCH, "config_user.json");
         //cira um obj json
         Json jsonCaregand = new Json();
@@ -60,10 +52,9 @@ public partial class Config : Control
 
         //pega o valor dentro do dic data(json) na key[opcao_reolucao] é já converte para int 
         id_resolucao = (int)user_save["opcao_reolucao"];
-        GD.Print($"dic_load: {user_save}");
+
         video();
     }
-
 
     //config video:
     private void video()
@@ -74,7 +65,7 @@ public partial class Config : Control
         //match case
         switch (id_resolucao)
         {
-            case 0:
+            case 0://<- opção defalt 
                 //edita um vector2I
                 reso = new Vector2I(1152, 648);
                 //conserta a opção do index
@@ -122,14 +113,15 @@ public partial class Config : Control
 
         if (is_voltar == true)
         {
-            GD.Print("aplicar -> tela scream");
+            //GD.Print("aplicar -> tela scream");
             salvar();
+            load();
             //mudar cena
             GetTree().ChangeSceneToFile(Cenes);
         }
         else
         {
-            GD.Print("aplicar");
+            //GD.Print("aplicar -> salvo");
             salvar();
             load();
         }
@@ -139,12 +131,12 @@ public partial class Config : Control
     private void reslocao_indexe(long index)
     {
         id_resolucao = (int)index;
-        //contenção tipo f string no python
-        GD.Print($"Index: {id_resolucao}");
+        /*contenção tipo f string no python
+        GD.Print($"Index: {id_resolucao}");*/
     }
 
-    //ANCHOR manibulção do json atrves da GODOT
-    //salva sjon
+    //ANCHOR manibulção do json atraves da GODOT
+    //salvar sjon
     private void SaveJson(string caminhoSjon, string dic, string nome_json)
     {
         //para ir até o caminho acima e abri o json
@@ -164,7 +156,7 @@ public partial class Config : Control
         return;
     }
 
-    //loade json
+    //loadejson
     private string LoadJson(string caminhoSjon, string nome_json)
     {
         string dados = null;
@@ -183,7 +175,7 @@ public partial class Config : Control
         {
             GD.Print(e);
         }
-
+        
         return dados;
     }
 }
