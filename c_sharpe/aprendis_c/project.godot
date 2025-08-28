@@ -22,6 +22,12 @@ GlobalVar="*res://scripts/Global_Var.cs"
 
 project/assembly_name="aprendis_c"
 
+[file_customization]
+
+folder_colors={
+"res://scripts/": "gray"
+}
+
 [input]
 
 w={
