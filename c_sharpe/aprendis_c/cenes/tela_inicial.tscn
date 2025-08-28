@@ -1,48 +1,38 @@
-[editor_states]
+[gd_scene load_steps=2 format=3 uid="uid://dbls2lgoqlo5d"]
 
-Anim={
-"visible": false
-}
-2D={
-"grid_offset": Vector2(0, 0),
-"grid_snap_active": false,
-"grid_step": Vector2(8, 8),
-"grid_visibility": 1,
-"ofs": Vector2(-165, -110),
-"primary_grid_step": Vector2i(8, 8),
-"show_group_gizmos": true,
-"show_guides": true,
-"show_helpers": false,
-"show_lock_gizmos": true,
-"show_origin": true,
-"show_position_gizmos": true,
-"show_rulers": true,
-"show_transformation_gizmos": true,
-"show_viewport": true,
-"show_zoom_control": true,
-"smart_snap_active": false,
-"snap_guides": true,
-"snap_node_anchors": true,
-"snap_node_center": true,
-"snap_node_parent": true,
-"snap_node_sides": true,
-"snap_other_nodes": true,
-"snap_pixel": true,
-"snap_relative": false,
-"snap_rotation": false,
-"snap_rotation_offset": 0.0,
-"snap_rotation_step": 0.261799,
-"snap_scale": false,
-"snap_scale_step": 0.1,
-"zoom": 1.0
-}
-3D={
-"fov": 70.01,
-"gizmos_status": {
-"AudioListener3D": 0,
-"AudioStreamPlayer3D": 0,
-"CPUParticles3D": 0,
-"CSGShape3D": 0,
-"Camera3D": 0,
-"CollisionObject3D": 0,
-"CollisionPolygon3D": 0,
+[ext_resource type="Script" uid="uid://c0juxhu8ne8m5" path="res://scripts/tela_inicial.cs" id="1_ctr1p"]
+
+[node name="tela_inicial" type="Control" node_paths=PackedStringArray("satrt", "exit", "config")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ctr1p")
+satrt = NodePath("start")
+exit = NodePath("exit")
+config = NodePath("config")
+star_cenes = "res://cenes/node_2d.tscn"
+
+[node name="start" type="Button" parent="."]
+layout_mode = 0
+offset_right = 45.0
+offset_bottom = 31.0
+text = "start"
+
+[node name="exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 143.0
+offset_right = 47.0
+offset_bottom = 174.0
+text = "exit"
+
+[node name="config" type="Button" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 63.0
+offset_right = 48.0
+offset_bottom = 94.0
+text = "cofig"
